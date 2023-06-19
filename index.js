@@ -14,4 +14,8 @@ closeModalBtn.addEventListener("click", () => {
 consentFormEl.addEventListener("submit", (e) => {
   e.preventDefault();
   modalTextEl.innerHTML = `<div class="modal-inner-loading"><img src="images/loading.svg" class="loading"><p id="uploadText">Uploading your data to the dark web...</p></div>`;
+
+  setTimeout(() => {
+    document.getElementById("uploadText").textContent = `Making the sale...`;
+  }, 1500);
 });
